@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    @RenderSection("head", required: false)
+    <link rel="stylesheet" href="~/cssforwebshop.css" />
+
+    <title>startsida - @Page.Title</title>
+</head>
+<body>
+    <div>
+        <ul>
+            <li><a href="~/hem.cshtml">Hem</a></li>
+            <li><a href="~/produkt.cshtml">Produkter</a></li>
+            <li><a href="~/kontakt.cshtml">Kontakta</a></li>
+            <li><a href="~/omoss.cshtml">Om Oss</a></li>
+        </ul>
+    </div>
+    <main>
+        @RenderBody()
+    </main>
+</body>
+</html>
