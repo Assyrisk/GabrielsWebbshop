@@ -135,6 +135,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\amaa.png" />
+    <Content Include="Images\app-store.png" />
+    <Content Include="Images\matebook.png" />
+    <Content Include="Images\menu.png" />
+    <Content Include="Images\play-store.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="omoss.cshtml" />
