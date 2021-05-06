@@ -6,18 +6,81 @@
 
 body {
     font-family: "Open Sans", Helvetica, Arial, sans-serif;
+   background-color: #263238;
+}
+
+#hero {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
 
-#carouselExampleControls {
-    width: 750px;
-    height: 750px;
-    margin: auto;
-    background: white;
-    padding: 10px;
+    #hero::after {
+      
+        height: 100%;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5)
+    }
+
+
+    #hero video {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        z-index: 5;
+        object-fit: cover;
+        font-family: 'object-fit: cover';
+    }
+
+#hero .texture {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    background: url('../texture.png');
 }
 
+
+#hero .caption {
+    position: relative;
+    z-index: 20;
+    text-align: center;
+    color: #ffffff;
+}
+
+
+
+    #hero .caption h1 {
+        text-transform: uppercase;
+        font-size: 2em;
+        font-family: 'Oswald', sans-serif;
+        margin-bottom: 0.5rem;
+    }
+
+    #hero .caption h2 {
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 0;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+.sektion1
+{
+    text-align:center;
+}
+
+video {
+    }
 
 
 .small-container {
@@ -42,6 +105,7 @@ body {
     min-width:200px;
     margin-bottom:50px;
     transition:transform 0.5s;
+    background-color:#FFF;
 }
 .col-4 img
 {
@@ -55,10 +119,9 @@ body {
 
 .offer
 {
-background-color:aqua;
 margin-top:80px;
 padding:30px 0;
-
+background-color:#FFF;
 }
 
 .col-2 {
@@ -92,7 +155,7 @@ padding:30px 0;
 /*Kod för mina tre recensioner*/
 .testimonial {
     padding-top: 100px;
-    background: radial-gradient(#fff, #ffd6d6 100%);
+    background-color:white;
 }
 
     .testimonial .col-3 {
@@ -116,6 +179,8 @@ padding:30px 0;
     flex-basis: 30%;
     min-width: 250px;
     margin-bottom: 30px;
+    background-color:pink;
+
 }
 
     .col-3 img {
@@ -148,6 +213,7 @@ padding:30px 0;
     align-items: center;
     flex-wrap: wrap;
     justify-content: space-around;
+
 }
 /*Footer CSS*/
 .col_white_amrc {
@@ -156,7 +222,6 @@ padding:30px 0;
 
 footer {
     width: 100%;
-    background-color: #263238;
     min-height: 250px;
     padding: 10px 0px 25px 0px;
 }
@@ -271,4 +336,5 @@ footer p {
             height: 20px;
             text-align: center;
         }
+
 

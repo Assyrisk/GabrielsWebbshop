@@ -127,16 +127,23 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\LED-LightsDB.mdf" />
+    <Content Include="App_Data\LED-LightsDB_log.ldf">
+      <DependentUpon>LED-LightsDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\OmOss.css" />
+    <Content Include="css\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="Images\1543646357_26.jpg" />
     <Content Include="Images\306RGBstrip.png" />
+    <Content Include="Images\4F6A2404-e1573574947408.jpg" />
     <Content Include="Images\amaa.png" />
     <Content Include="Images\app-store.png" />
     <Content Include="Images\HTB1ighuayDxK1RjSsph762HrpXaM.png" />
@@ -151,6 +158,7 @@
     <Content Include="Images\matebook.png" />
     <Content Include="Images\menu.png" />
     <Content Include="Images\play-store.png" />
+    <Content Include="Images\red.png" />
     <Content Include="Images\redlights.png" />
     <Content Include="Images\RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" />
     <Content Include="Images\shutterstock_463040638-1.jpg" />
@@ -172,6 +180,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="css\cssforwebshop.css" />
+    <Content Include="Videos\videoplayback.mp4" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -190,9 +199,9 @@
     <Content Include="Shared\_Layout.cshtml" />
     <Content Include="produkt.cshtml" />
     <Content Include="kontakt.cshtml" />
+    <Content Include="Shared\_LayoutForOmOss.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

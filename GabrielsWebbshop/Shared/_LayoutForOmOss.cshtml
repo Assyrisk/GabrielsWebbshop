@@ -1,0 +1,54 @@
+﻿    <!DOCTYPE html>
+    <html>
+    <head>
+        
+        @RenderSection("head", required: false)
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="~/css/OmOss.css" />
+        <title>startsida - @Page.Title</title>
+    </head>
+    <body>
+        <!-- Min header -->
+        <div class="bs-example">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a href="https://edgymnasiet.se/" class="navbar-brand">
+                    <img src="edgymnasiet.png" alt="dd" width="150"
+                         height="100">
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav">
+                        <a href="https://edgymnasiet.se/" class="nav-item nav-link ">Hem</a>
+                        <a href="https://edgymnasiet.se/program.html" class="nav-item nav-link">Program</a>
+                        <a href="https://edgymnasiet.se/om-skolan.html" class="nav-item nav-link">Om Skolan</a>
+                        <a href="https://edgymnasiet.se/kontakta-oss.html" class="nav-item nav-link">Kontakta Oss</a>
+                        <a href="https://edgymnasiet.se/for-dig-pa-ed.html" class="nav-item nav-link">För Dig På Ed</a>
+                    </div>
+                    <form class="form-inline ml-auto">
+                        <input type="text" class="form-control mr-sm-2" placeholder="Search">
+                        <button type="submit" class="btn btn-outline-light">Search</button>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <br />
+
+
+
+        <main>
+            @RenderBody()
+        </main>
+
+
+    </body>
+</html>
+
