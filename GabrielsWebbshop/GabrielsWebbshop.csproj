@@ -135,7 +135,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="css\OmOss.css" />
+    <Content Include="css\produkter.css" />
     <Content Include="css\StyleSheet1.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -146,8 +146,10 @@
     <Content Include="Images\4F6A2404-e1573574947408.jpg" />
     <Content Include="Images\amaa.png" />
     <Content Include="Images\app-store.png" />
+    <Content Include="Images\f0rtdgonaygpdnpgfo0e.jpg" />
     <Content Include="Images\HTB1ighuayDxK1RjSsph762HrpXaM.png" />
     <Content Include="Images\imgbin-led-strip-light-light-emitting-diode-rgb-color-model-led-lamp-light-fixture-lamp-23c7x7D67MrN9bDmaxq4uC4CC.jpg" />
+    <Content Include="Images\istockphoto-910062090-1024x1024.jpg" />
     <Content Include="Images\led-light-strip-cool-red.jpg" />
     <Content Include="Images\LED-light-strips-2.jpg" />
     <Content Include="Images\logo-coca-cola.png" />
@@ -167,7 +169,6 @@
     <Content Include="Images\user-3.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="omoss.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -199,7 +200,8 @@
     <Content Include="Shared\_Layout.cshtml" />
     <Content Include="produkt.cshtml" />
     <Content Include="kontakt.cshtml" />
-    <Content Include="Shared\_LayoutForOmOss.cshtml" />
+    <Content Include="Login.cshtml" />
+    <Content Include="Shared\_LayoutP.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
