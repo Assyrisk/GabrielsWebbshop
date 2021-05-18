@@ -1,14 +1,43 @@
-﻿@{
+﻿
+@{
     Layout = "~/Shared/_LayoutP.cshtml";
     Page.Title = "Produkter";
 }
+@using System.Configuration;
+@using System.Data.SqlClient;
+
+
+
+@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LED-Lights"].ConnectionString))
+                {
+                    con.Open();
+                    var queryString = "SELECT * FROM Orders";
+                    SqlCommand cmd = new SqlCommand(queryString, con);
+                    using (SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.HasRows)
+                        {
+                            // Read advances to the next row.
+                            while (reader.Read())
+                            {
+                                var valeu1 = reader[0];
+                                var value2 = reader[1];
+                            }
+
+
+
+                        }
+                    }
+                } }
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title></title>
     <meta />
-    <link rel="stylesheet" href="~/css/produkter.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="~/JavaScript/JavaScript.js"></script>
 </head>
 <body>
     <section class="container content-section">
@@ -16,54 +45,140 @@
         <div class="shop-items">
             <div class="card">
                 <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-                <p class="shop-item-price">10000 kr</p>
-                <p class="shop-item-title">Iphone 12</p>
+                <p class="shop-item-price">150 kr</p>
+                <p class="shop-item-title">Blåa LED-Lights</p>
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
                 </div>
             </div>
             <div class="card">
-                <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-                <p class="shop-item-price"> 12500 kr</p>
-                <p class="shop-item-title">Ipad Pro</p>
+                <img class="shop-item-image" src="~/Images/1543646357_26.jpg" alt="">
+                <p class="shop-item-price"> 180 kr</p>
+                <p class="shop-item-title">Gröna LED-Lights</p>
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
                 </div>
             </div>
             <div class="card">
-                <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-                <p class="shop-item-price">7000 kr</p>
-                <p class="shop-item-title">Iphone X</p>
+                <img class="shop-item-image" src="~/Images/yellow.jpg" alt="">
+                <p class="shop-item-price">100 kr</p>
+                <p class="shop-item-title">Gula LED-Lights</p>
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
                 </div>
             </div>
         </div>
-    
-        <div class="card">
-            <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-            <p class="shop-item-price"> 5000 kr</p>
-            <p class="shop-item-title">Apple Watch Series 6</p>
+    </section>
+
+    <br />
+    <section class="container content-section">
+        <h2 class="section-header">Flerfärgade</h2>
+
+        <div class="card1">
+            <img class="shop-item-image" src="~/Images/71ToZSgF9fL._AC_SL1200_.jpg" alt="">
+            <p class="shop-item-price"> 450 kr</p>
+            <p class="shop-item-title">3-Pack LED-Lights</p>
             <div class="shop-item-details">
                 <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
             </div>
         </div>
-            <div class="card">
-                <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-                <p class="shop-item-price">2000 kr</p>
-                <p class="shop-item-title">Apple Tv</p>
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
-                </div>
+        <div class="card1">
+            <img class="shop-item-image" src="~/Images/merry.jpg" alt="">
+            <p class="shop-item-price">200 kr</p>
+            <p class="shop-item-title">Blå och Röd LED-Lights</p>
+            <div class="shop-item-details">
+                <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
             </div>
-            <div class="card">
-                <img class="shop-item-image" src="~/Images/RGB-LED-Strip-Lights-5050-AC220V-AC110V-50m-100m-Multicolor-Flexible-Roll-IP65-Outdoor-Waterproof-RGB-Multicolor-LED-Light-Strips.jpg" alt="">
-                <p class="shop-item-price">1500 kr</p>
-                <p class="shop-item-title">Airpods</p>
-                <div class="shop-item-details">
-                    <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
-                </div>
+        </div>
+        <div class="card1">
+            <img class="shop-item-image" src="~/Images/5e64a0991d94e0fb022f8948-large.jpg" alt="">
+            <p class="shop-item-price">1500 kr</p>
+            <p class="shop-item-title">1-Pack LED-Lights</p>
+            <div class="shop-item-details">
+                <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
             </div>
+        </div>
     </section>
+    <br />
+    <!-- Kod för min kundvagn -->
+    <section class="container content-section">
+        <h2 class="section-header">KUNDVAGN</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">VARA</span>
+            <span class="cart-price cart-header cart-column">PRIS</span>
+            <span class="cart-quantity cart-header cart-column">ANTAL</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">TOTALPRIS</strong>
+            <span class="cart-total-price">0 kr</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">KÖP</button>
+    </section>
+    <!--Footer Börjar-->
+    <footer class="footer footer-dark bg-dark">
+        <div class="containerna bottom_border">
+            <div class="row">
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Kontakta Oss</h5>
+                    <p class="mb10">Har du några övriga frågor om Erik Dahlbergsgymnasiet kan du kontakta oss genom: </p>
+                    <p><i class="fa fa-phone"></i> 0743637438 </p>
+                    <p><i class="fa fa fa-envelope"></i> ErikDahlberg@jonkoping.se </p>
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Snabba Länkar</h5>
+                    <ul class="footer_ul_amrc">
+                        <li><a href="https://edgymnasiet.se/">Hem</a></li>
+                        <li><a href="https://edgymnasiet.se/program.html">Program</a></li>
+                        <li><a href="https://edgymnasiet.se/om-skolan.html">Om Skolan</a></li>
+                        <li><a href="https://edgymnasiet.se/kontakta-oss.html">Kontakta Oss</a></li>
+                        <li><a href="https://edgymnasiet.se/for-dig-pa-ed.html">För Dig På Ed</a></li>
+                    </ul>
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-6 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Andra Program</h5>
+                    <ul class="footer_ul_amrc">
+                        <li><a href="https://edgymnasiet.se/program/ekonomi.html">Ekonomi</a></li>
+                        <li><a href="https://edgymnasiet.se/program/naturvetenskap.html">Narurvetenskap</a></li>
+                        <li><a href="https://edgymnasiet.se/program/samhallsvetenskap.html">Samhällsvetenskap</a></li>
+                        <li><a href="https://edgymnasiet.se/program/teknik.html">Teknik</a></li>
+                        <li><a href="https://edgymnasiet.se/program/vvs--och-fastighet.html">VVS- och fastighet</a></li>
+                        <li><a href="https://edgymnasiet.se/program/vard--och-omsorg.html">Vård- och omsorg</a></li>
+                        <li>
+                            <a href="https://edgymnasiet.se/program/yrkes--och-sprakintroduktion.html">
+                                Yrkes- och
+                                språkintroduktion
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+                <div class=" col-sm-4 col-md  col-12 col">
+                    <h5 class="headin5_amrc col_white_amrc pt2">Våra Sociala Medier</h5>
+                    <p><i class=" fa fa-facebook-official "></i> Erik Dahlbergsgymnasiet</p>
+                    <p><i class="fa fa-twitter-square"></i> </p>
+                    <p><i class="fa fa-instagram"> </i> erik_dahlbergsgymnasiet</p>
+                </div>
+            </div>
+        </div>
+
+        <p class="text-center" style="margin-left: 60px;">Copyright 2021 | Gabriel Adward</p>
+        <div class="container">
+            <ul class="social_footer_ul">
+                <li><a href="https://sv-se.facebook.com/edgymnasiet/"><i class="fa fa-facebook-f"></i></a></li>
+                <li><a href="https://twitter.com/edgymnasiet"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/erik_dahlbergsgymnasiet/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+
+
+
 </body>
 </html>

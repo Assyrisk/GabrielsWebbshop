@@ -1,0 +1,62 @@
+﻿@{
+    Layout = "~/Shared/_LayoutP.cshtml";
+    Page.Title = "Produkter";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="~/css/produkter.css" />
+    <script src="~/JavaScript/JavaScript.js"></script>
+</head>
+<body>
+    <section class="container content-section">
+        <h2 class="section-header">Enfärgade</h2>
+        <div class="shop-items">
+            <div class="card">
+                <img class="shop-item-image" src="~/Images/18c0b372a063955ca6d28e77ab9f09a0.jpg" alt="">
+
+                <p class="shop-item-price">150 kr</p>
+                <p class="shop-item-title">Blåa LED-Lights</p>
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="shop-item-image" src="~/Images/HTB1ighuayDxK1RjSsph762HrpXaM.png" alt="">
+                <p class="shop-item-price"> 180 kr</p>
+                <p class="shop-item-title">Gröna LED-Lights</p>
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
+                </div>
+            </div>
+            <div class="card">
+                <img class="shop-item-image" src="~/Images/nedladdning.jpg" alt="">
+                <p class="shop-item-price">100 kr</p>
+                <p class="shop-item-title">Gula LED-Lights</p>
+                <div class="shop-item-details">
+                    <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kod för min kundvagn -->
+    <section class="container content-section">
+        <h2 class="section-header">KUNDVAGN</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">VARA</span>
+            <span class="cart-price cart-header cart-column">PRIS</span>
+            <span class="cart-quantity cart-header cart-column">ANTAL</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">TOTALPRIS</strong>
+            <span class="cart-total-price">0 kr</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">KÖP</button>
+    </section>
+
+</body>
+</html>

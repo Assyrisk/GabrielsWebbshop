@@ -10,28 +10,37 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="~/css/cssforwebshop.css" />
+    <link rel="stylesheet" href="~/css/produkter.css" />
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
     <title>startsida - @Page.Title</title>
+    <style>
+        #myVideo {
+            position: fixed;
+            z-index: -1;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            filter: brightness(25%);
+        }
+    </style>
 </head>
 <body>
     <!-- Min header -->
+    <!-- Min header -->
     <div class="bs-example">
         <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <a href="https://edgymnasiet.se/" class="navbar-brand">
-                <img src="edgymnasiet.png" alt="dd" width="150"
-                     height="100">
-            </a>
+            <h1 class="navbar-brand">G&A <br />LEDZ</h1>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
+            <br />
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav">
                     <a href="~/hem.cshtml" class="nav-item nav-link ">Hem</a>
-                    <a href="https://edgymnasiet.se/program.html" class="nav-item nav-link">Program</a>
-                    <a href="https://edgymnasiet.se/om-skolan.html" class="nav-item nav-link">Om Skolan</a>
-                    <a href="https://edgymnasiet.se/kontakta-oss.html" class="nav-item nav-link">Kontakta Oss</a>
-                    <a href="https://edgymnasiet.se/for-dig-pa-ed.html" class="nav-item nav-link">För Dig På Ed</a>
+                    <a href="~/produkt.cshtml" class="nav-item nav-link">Produkter</a>
+                    <a href="~/kontakt.cshtml" class="nav-item nav-link">Kontakta oss</a>
+                    <a href="~/omoss.cshtml" class="nav-item nav-link">Om Oss</a>
                 </div>
                 <form class="form-inline ml-auto">
                     <input type="text" class="form-control mr-sm-2" placeholder="Search">
@@ -40,6 +49,9 @@
             </div>
         </nav>
     </div>
+    <video playsinline autoplay muted loop id="myVideo">
+        <source src="~/Videos/videoplayback.mp4" type="video/mp4">
+    </video>
     <br />
 
 
