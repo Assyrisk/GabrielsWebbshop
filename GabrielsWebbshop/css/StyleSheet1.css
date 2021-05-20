@@ -3,174 +3,218 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-body {
-    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+/*Fonter*/
+h1, h2, h3 {
+    font-family: Ravie;
 }
 
-#myVideo {
-    position: fixed;
-    z-index: -1;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    filter: brightness(25%);
-}
- h2, h3 {
-    margin: 0 0 35px 0;
-    font-family: 'Patua One', cursive;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-p {
-    margin: 0 0 25px;
-    font-size: 18px;
-    line-height: 1.6em;
-}
-
-
-
-#contact {
-    color: #f4f4f4;
-    padding-bottom: 80px;
-}
-
-textarea.form-control {
-    height: 100px;
-}
-
-.btn
+p
 {
-    background-color:white;
+    font-family:Roboto;
+}
+/*Fonter Slutar*/
+
+/*Navbar CSS*/
+.bild {
+    display: block;
+    margin-left: 43%;
+    margin-right: auto;
+    width: 50%;
 }
 
-.placering
-{
-    margin-right:100%;
+.back {
+    background-color: #577590;
 }
 
-/*Footer CSS*/
-.col_white_amrc {
-    color: #FFF;
+
+.topnav {
+    overflow: hidden;
+    background-color: #FDB0B1;
 }
 
-footer {
-    width: 100%;
-    background-color: #263238;
-    min-height: 250px;
-    padding: 10px 0px 25px 0px;
+    .topnav a {
+        float: left;
+        display: block;
+        color: #333333;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+        .topnav a:hover {
+            background-color: #333333;
+            color: #fff;
+        }
+
+
+
+    .topnav .search-container {
+        float: right;
+    }
+
+    .topnav input[type=text] {
+        padding: 6px;
+        margin-top: 8px;
+        font-size: 17px;
+        border: none;
+    }
+
+    .topnav .search-container button {
+        float: right;
+        padding: 6px 10px;
+        margin-top: 8px;
+        margin-right: 16px;
+        background: #fff;
+        font-size: 17px;
+        border: none;
+        cursor: pointer;
+    }
+
+        .topnav .search-container button:hover {
+            background: #808080;
+        }
+/*Navbar slutar*/
+
+/*Om Oss CSS*/
+.paddingTB60 {
+    padding: 60px 0px 60px 0px;
 }
 
-.pt2 {
-    padding-top: 40px;
+.gray-bg {
+    background: #F1F1F1 !important;
+}
+
+.about-title {
+}
+
+    .about-title h1 {
+        color: #535353;
+        font-size: 45px;
+        font-weight: 600;
+    }
+
+    .about-title span {
+        color: #AF0808;
+        font-size: 45px;
+        font-weight: 700;
+    }
+
+    .about-title h3 {
+        color: #535353;
+        font-size: 23px;
+        margin-bottom: 24px;
+    }
+
+    .about-title p {
+        color: #7a7a7a;
+        line-height: 1.8;
+        margin: 0 0 15px;
+    }
+
+.about-paddingB {
+    padding-bottom: 12px;
+}
+/*Om Oss CSS Slutar*/
+
+
+/*Kod för footer*/
+.footer {
+    background: #577590;
+    color: #fff;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.footer p {
+    color: #fff;
+}
+
+.footer h3 {
+    color: #fff;
     margin-bottom: 20px;
 }
 
-footer p {
-    font-size: 13px;
-    color: #CCC;
-    padding-bottom: 0px;
-    margin-bottom: 8px;
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 250px;
+    margin-bottom: 20px;
 }
 
-.mb10 {
-    padding-bottom: 15px;
+.footer-col-1 {
+    flex-basis: 30%;
 }
 
-.footer_ul_amrc {
-    margin: 0px;
-    list-style-type: none;
-    font-size: 14px;
-    padding: 0px 0px 10px 0px;
+.footer-col-2 {
+    flex: 1;
+    text-align: center;
 }
 
-    .footer_ul_amrc li {
-        padding: 0px 0px 5px 0px;
+    .footer-col-2 img {
+        width: 180px;
+        text-align: center;
     }
 
-        .footer_ul_amrc li a {
-            color: #CCC;
-        }
-
-            .footer_ul_amrc li a:hover {
-                color: #fff;
-                text-decoration: none;
-            }
-
-.fleft {
-    float: left;
+.footer-col-3, .footer-col-4 {
+    flex-basis: 12%;
+    text-align: center;
 }
 
-.padding-right {
-    padding-right: 10px;
-}
-
-.footer_ul2_amrc {
-    margin: 0px;
-    list-style-type: none;
-    padding: 0px;
-}
-
-    .footer_ul2_amrc li p {
-        display: table;
-    }
-
-    .footer_ul2_amrc li a:hover {
-        text-decoration: none;
-    }
-
-    .footer_ul2_amrc li i {
-        margin-top: 5px;
-    }
-
-.bottom_border {
-    border-bottom: 1px solid #323f45;
-    padding-bottom: 20px;
-}
-
-.foote_bottom_ul_amrc {
-    list-style-type: none;
-    padding: 0px;
-    display: table;
-    margin-top: 10px;
-    margin-right: auto;
-    margin-bottom: 10px;
-    margin-left: auto;
-}
-
-    .foote_bottom_ul_amrc li {
-        display: inline;
-    }
-
-        .foote_bottom_ul_amrc li a {
-            color: #999;
-            margin: 0 12px;
-        }
-
-.social_footer_ul {
-    display: table;
-    margin: 15px auto 0 auto;
+ul {
     list-style-type: none;
 }
 
-    .social_footer_ul li {
-        padding-left: 20px;
-        padding-top: 10px;
-        float: left;
+.app-logo {
+    margin-top: 20px;
+}
+
+    .app-logo img {
+        width: 140px;
     }
 
-        .social_footer_ul li a {
-            color: #CCC;
-            border: 1px solid #CCC;
-            padding: 8px;
-            border-radius: 50%;
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.footer a {
+    color: #FFF;
+}
+
+.copyright {
+    text-align: center;
+}
+
+.syfte {
+    margin-top: 30px;
+}
+/*footer slutar*/
+
+/*Anpassar navbar till mobil*/
+@media screen and (max-width: 600px) {
+    .topnav .search-container {
+        float: none;
+    }
+
+        .topnav a, .topnav input[type=text], .topnav .search-container button {
+            float: none;
+            display: block;
+            text-align: left;
+            width: 100%;
+            margin: 0;
+            padding: 14px;
         }
 
-        .social_footer_ul li i {
-            width: 20px;
-            height: 20px;
-            text-align: center;
-        }
+    .topnav input[type=text] {
+        border: 1px solid #ccc;
+    }
+}
+

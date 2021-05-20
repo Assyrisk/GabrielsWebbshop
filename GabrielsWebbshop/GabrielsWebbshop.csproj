@@ -185,6 +185,7 @@
     <Content Include="Images\user-2.png" />
     <Content Include="Images\user-3.png" />
     <Content Include="Images\VF-4040-RGB-120-0824-FX.jpg" />
+    <Content Include="Images\VL.png" />
     <Content Include="Images\yellow.jpg" />
     <Content Include="JavaScript\JavaScript.js" />
     <Content Include="omoss.cshtml" />
@@ -213,6 +214,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="login.cshtml" />
     <None Include="Scripts\jquery-3.6.0.intellisense.js" />
     <Content Include="Scripts\jquery-3.6.0.js" />
     <Content Include="Scripts\jquery-3.6.0.min.js" />
@@ -315,7 +317,6 @@
     <Content Include="Shared\_Layout.cshtml" />
     <Content Include="produkt.cshtml" />
     <Content Include="kontakt.cshtml" />
-    <Content Include="Login.cshtml" />
     <Content Include="Shared\_LayoutP.cshtml" />
     <Content Include="SenastePro.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
@@ -328,6 +329,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Shared\_LayoutS.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />

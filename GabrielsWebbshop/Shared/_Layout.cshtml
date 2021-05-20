@@ -14,58 +14,32 @@
     <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 
     <title>startsida - @Page.Title</title>
-    <style>
-        #carouselExampleControls {
-            max-width: 800px;
-            max-height: 1300px;
-            margin: auto;
-            background: white;
-            padding: 10px;
-        }
-
-        h1{
-
-            text-align:center;
-           color:white;
-        }
-
-        #myVideo {
-            position: fixed;
-            z-index: -1;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            filter: brightness(25%);
-        }
-    </style>
 </head>
 <body>
-    <!-- Min header -->
-    <div class="bs-example">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-            <h1 class="navbar-brand">G&A <br/>LEDZ</h1>
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <br/>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="~/hem.cshtml" class="nav-item nav-link ">Hem</a>
-                    <a href="~/produkt.cshtml" class="nav-item nav-link">Produkter</a>
-                    <a href="~/kontakt.cshtml" class="nav-item nav-link">Kontakta oss</a>
-                    <a href="~/omoss.cshtml" class="nav-item nav-link">Om Oss</a>
-                </div>
-                <form class="form-inline ml-auto">
-                    <input type="text" class="form-control mr-sm-2" placeholder="Search">
-                    <button type="submit" class="btn btn-outline-light">Search</button>
-                </form>
-            </div>
-        </nav>
+    <!--Header Börjar -->
+    <!--Navbar börjar-->
+    <div class="back">
+        <a class="bild"> <img src="~/Images/VL.png" alt="dd" width="150" height="100"></a>
     </div>
+    <div class="topnav">
+       
+            <a class="active" href="~/hem.cshtml">Hem</a>
+            <a href="~/produkt.cshtml">Produkter</a>
+            <a href="~/kontakt.cshtml">Kontakta Oss</a>
+            <a href="~/Login.cshtml">Logga In</a>
+            <a href="~/omoss.cshtml">Om Oss</a>
+        <div class="search-container">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <!--Navbar Slutar-->
     <br />
-    <h1>Välkomna kära kunder!</h1>
+    <h1 class="rub">Välkomna Till Viral LEDs!</h1>
     <br />
+    <!--Karusell Börjar (Bootstrap)-->
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
@@ -94,12 +68,13 @@
         </a>
     </div>
 
-
+    <!--Video spelar i bakgrunden-->
     <video playsinline autoplay muted loop id="myVideo">
         <source src="~/Videos/videoplayback.mp4" type="video/mp4">
     </video>
     <br />
-
+    <!--Video Slutar-->
+    <!--Header Slutar -->
 
 
     <main>
