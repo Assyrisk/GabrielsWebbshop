@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-/*Fonter*/
+/*Css Fonts begins*/
 h1, h2, h3 {
     font-family: Ravie;
 }
@@ -12,7 +12,7 @@ p
 {
     font-family:Roboto;
 }
-/*Fonter Slutar*/
+/*CSS Fonts ends*/
 
 /*Navbar CSS*/
 .bild {
@@ -74,15 +74,15 @@ p
         .topnav .search-container button:hover {
             background: #808080;
         }
-/*Navbar slutar*/
+/*Navbar CSS ends*/
 
-/*Om Oss CSS*/
+/*About us CSS*/
 .paddingTB60 {
     padding: 60px 0px 60px 0px;
 }
 
 .gray-bg {
-    background: #F1F1F1 !important;
+    background: #F1F1F1 ;
 }
 
 .about-title {
@@ -115,10 +115,10 @@ p
 .about-paddingB {
     padding-bottom: 12px;
 }
-/*Om Oss CSS Slutar*/
+/*About Us CSS Ends*/
 
 
-/*Kod för footer*/
+/*CSS footer*/
 .footer {
     background: #577590;
     color: #fff;
@@ -196,9 +196,9 @@ ul {
 .syfte {
     margin-top: 30px;
 }
-/*footer slutar*/
+/*CSS footer*/
 
-/*Anpassar navbar till mobil*/
+/*Adapts to mobileversion*/
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
@@ -217,4 +217,5 @@ ul {
         border: 1px solid #ccc;
     }
 }
+/*Adapts to mobileversion ends*/
 

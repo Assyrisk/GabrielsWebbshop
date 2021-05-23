@@ -3,6 +3,34 @@
     Page.Title = "Kontakta Oss";
 }
 
+@using WebMatrix;
+@using System;
+@using System.Collections.Generic;
+@using System.Configuration;
+@using System.Data.SqlClient;
+
+
+<!--The code worked but on saturday all collapsed and stopt working, try this code on your computer otherwise delete the code to view the site-->
+
+
+
+@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LEDLights"].ConnectionString))
+    {
+        var db = Database.Open("LEDLights");
+        var QueryString = "SELECT * FROM Information";
+        var result = db.Query(QueryString);
+        {
+            foreach (var Information in result)
+            {
+                @Information.ID
+                @Information.Name
+                @Information.Email
+            }
+        }
+    }
+}
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +41,7 @@
     <link rel="stylesheet" href="~/css/produkter.css" />
 </head>
 <body>
-    <!--Formulär börjar (Bootstrap)-->
+    <!--Form Begins (Bootstrap)-->
     <section id="contact" class="content-section text-center">
         <div class="contact-section">
             <div class="container">
@@ -41,10 +69,8 @@
             </div>
         </div>
     </section>
-    <!--Formulär Slutar-->
-
-
-    <!--Footer Börjar-->
+    <!--Form Ends (Bootstrap)-->
+    <!--Footer Begins-->
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -91,6 +117,6 @@
             <p class="copyright">Copyright 2021 | Gabriel Adward</p>
         </div>
     </div>
-    <!--Footer Slutar-->
+    <!--Footer Ends-->
 </body>
 </html>

@@ -3,9 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-
-/*Navbar CSS*/
+/*Css Fonts begins*/
 h1, h2, h3 {
     font-family: Ravie;
 }
@@ -13,19 +11,10 @@ h1, h2, h3 {
 p {
     font-family: Roboto;
 }
+/*Css Fonts Ends*/
 
-.bild {
-    display: block;
-    margin-left: 43%;
-    margin-right: auto;
-    width: 50%;
-}
 
-.back {
-    background-color: #577590;
-}
 /*Navbar CSS*/
-
 .topnav {
     overflow: hidden;
     background-color: #FDB0B1;
@@ -34,7 +23,7 @@ p {
     .topnav a {
         float: left;
         display: block;
-        color: black;
+        color: #333333;
         text-align: center;
         padding: 14px 16px;
         text-decoration: none;
@@ -71,11 +60,20 @@ p {
     }
 
         .topnav .search-container button:hover {
-            background: grey;
+            background: #808080;
         }
 
+.bild {
+    display: block;
+    margin-left: 43%;
+    margin-right: auto;
+    width: 50%;
+}
 
-/*Navbar slutar*/
+.back {
+    background-color: #577590;
+}
+/*Navbar CSS Ends*/
 
 #myVideo {
     position: fixed;
@@ -89,7 +87,7 @@ p {
 
 
 
-/*Kod för mina varor och kundvagn*/
+/*CSS for products and shopping basket*/
 
 .section-header {
     font-weight: normal;
@@ -162,7 +160,7 @@ p {
         border: none;
         outline: 0;
         padding: 12px;
-        color: white;
+        color: #fff;
         background-color: #000;
         text-align: center;
         cursor: pointer;
@@ -192,7 +190,7 @@ p {
         border: none;
         outline: 0;
         padding: 12px;
-        color: white;
+        color: #fff;
         background-color: #000;
         text-align: center;
         cursor: pointer;
@@ -276,7 +274,7 @@ p {
 }
 
 .btn-danger {
-    background-color:red;
+    background-color:#FF0000;
     border: none;
     border-radius: .3em;
     font-weight: bold;
@@ -330,7 +328,7 @@ p {
     margin: 40px auto 80px auto;
     font-size: 1.75em;
 }
-/*Kod för mina varor och kundvagn slutar*/
+/*CSS for products and shopping basket ends*/
 
 
 
@@ -338,7 +336,7 @@ p {
 
 
 
-/*Kontakta Oss Formulär Börjar */
+/*contact us form css */
 #contact {
     color: #f4f4f4;
     padding-bottom: 80px;
@@ -349,13 +347,13 @@ textarea.form-control {
 }
 
 .btn {
-    background-color: white;
+    background-color: #fff;
 }
 
 .placering {
     margin-right: 100%;
 }
-/*Kontakta Oss Formulär Slutar */
+/*contact us form css ends */
 
 .row {
     display: flex;
@@ -363,7 +361,7 @@ textarea.form-control {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-/*Kod för footer*/
+/*CSS for footer*/
 .footer {
     background: #577590;
     color: #fff;
@@ -441,9 +439,9 @@ ul {
 .syfte {
     margin-top: 30px;
 }
-/*footer slutar*/
+/*CSS for footer*/
 
-/*Anpassar navbar till mobil*/
+/*Adapts to mobileversion*/
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
@@ -462,6 +460,7 @@ ul {
         border: 1px solid #ccc;
     }
 }
+/*Adapts to mobileversion ends*/
 
 
 

@@ -3,6 +3,30 @@
     Layout = "~/Shared/_LayoutP.cshtml";
     Page.Title = "Produkter";
 }
+@using WebMatrix;
+@using System;
+@using System.Collections.Generic;
+@using System.Configuration;
+@using System.Data.SqlClient;
+
+<!--The code for database worked but on saturday all collapsed and stopt working, try this code on your computer otherwise delete the code to view the site-->
+
+@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LEDLights"].ConnectionString))
+    {
+        var db = Database.Open("LEDLights");
+        var QueryString = "SELECT * FROM Produkter";
+        var result = db.Query(QueryString);
+        {
+            foreach (var Produkter in result)
+            {
+                @Produkter.ID
+                @Produkter.Name
+                @Produkter.Price
+            }
+        }
+    }
+}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,6 +38,7 @@
     <script src="~/JavaScript/JavaScript.js"></script>
 </head>
 <body>
+    <!--Products Begins-->
     <section class="container content-section">
         <h2 class="section-header">Våra Produkter</h2>
         <div class="shop-items">
@@ -37,7 +62,7 @@
             </div>
             <div class="card">
                 <img class="shop-item-image" src="~/Images/yellow.jpg" alt="">
-                <br/>
+                <br />
                 <h4 class="shop-item-title">Gula LED-Lights</h4>
                 <h4 class="shop-item-price">100 kr</h4>
                 <div class="shop-item-details">
@@ -45,10 +70,9 @@
                 </div>
             </div>
         </div>
-   
-   
     </section>
-      <!-- Kod för min kundvagn -->
+    <!--Products Ends-->
+    <!-- Code for Shoping-basket starts -->
     <section class="container content-section">
         <h2 class="section-header">KUNDVAGN</h2>
         <div class="cart-row">
@@ -64,7 +88,8 @@
         </div>
         <button class="btn btn-primary btn-purchase" type="button">KÖP</button>
     </section>
-    <!--Footer Börjar-->
+    <!-- Code for Shoping-basket Ends -->
+    <!--Footer begins-->
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -111,7 +136,7 @@
             <p class="copyright">Copyright 2021 | Gabriel Adward</p>
         </div>
     </div>
-    <!--Footer Slutar-->
+    <!--Footer Ends-->
 
 </body>
 </html>

@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+/*Css Fonts begins*/
 
 h1, h2, h3 {
     font-family: Ravie;
@@ -10,18 +11,10 @@ h1, h2, h3 {
  p{
      font-family:Roboto;
  }
+/*Css Fonts Ends*/
 
-.bild {
-    display: block;
-    margin-left: 43%;
-    margin-right: auto;
-    width: 50%;
-}
 
-.back {
-    background-color: #577590;
-}
-/*Navbar CSS*/
+/*Navbar CSS Starts*/
 
 .topnav {
     overflow: hidden;
@@ -68,13 +61,22 @@ h1, h2, h3 {
     }
 
         .topnav .search-container button:hover {
-            background: grey;
+            background: #808080;
         }
+.bild {
+    display: block;
+    margin-left: 43%;
+    margin-right: auto;
+    width: 50%;
+}
 
+.back {
+    background-color: #577590;
+}
 
-/*Navbar slutar*/
+/*Navbar CSS Ends*/
 
-/*Karusell CSS Börjar */
+/*Carousel CSS Starts */
 #carouselExampleControls {
     max-width: 800px;
     max-height: 1300px;
@@ -87,9 +89,9 @@ h1, h2, h3 {
     text-align: center;
     color: #fff;
 }
-/*Karusell CSS Slutar */
+/*Carousel CSS Ends */
 
-/*Video CSS Börjar*/
+/*Video CSS Starts*/
 #myVideo {
     position: fixed;
     z-index: -1;
@@ -99,10 +101,10 @@ h1, h2, h3 {
     min-height: 100%;
     filter: brightness(25%);
 }
-/*Video CSS Slutar*/
+/*Video CSS Ends*/
 
 
-/*Senaste produkt CSS Börjar*/
+/*Latest Products CSS Starts*/
 .offer {
     margin-top: 80px;
     padding: 30px 0;
@@ -199,10 +201,10 @@ h1, h2, h3 {
         background-color: #2D9CDB;
     }
 
-/*Senaste produkt CSS Slutar*/
+/*Latest Products CSS Starts*/
 
 
-/*Certifikat CSS Börjar*/
+/*Certificate CSS starts*/
 .titlar {
     color: #fff;
     text-align: center;
@@ -236,10 +238,10 @@ h1, h2, h3 {
         -webkit-transform: scale(1.3);
         transform: scale(1.5);
     }
-/*Certifikat CSS Slutar*/
+/*Certificate CSS Ends*/
 
 
-/*Tre recensioner CSS Börjar*/
+/*Three reviews CSS Starts*/
 .testimonial {
     padding-top: 100px;
 }
@@ -300,10 +302,10 @@ h1, h2, h3 {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-/*Tre recensioner CSS Slutar*/
+/*Three reviews CSS Ends*/
 
 
-/*Footer CSS Börjar*/
+/*Footer CSS Begins*/
 .footer {
     background: #577590;
     color: #fff;
@@ -375,8 +377,10 @@ ul {
 .copyright {
     text-align: center;
 }
-/*Footer CSS Slutar*/
+/*Footer CSS Ends*/
 
+
+/*Adapts to mobileversion*/
 @media screen and (max-width: 600px) {
     .topnav .search-container {
         float: none;
@@ -395,3 +399,4 @@ ul {
         border: 1px solid #ccc;
     }
 }
+/*Adapts to mobileversion ends*/

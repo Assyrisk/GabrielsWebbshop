@@ -2,6 +2,33 @@
     Layout = "~/Shared/_LayoutP.cshtml";
     Page.Title = "Produkter";
 }
+
+
+@using WebMatrix;
+@using System;
+@using System.Collections.Generic;
+@using System.Configuration;
+@using System.Data.SqlClient;
+
+
+
+<!--The code worked but on saturday all collapsed and stopt working, try this code on your computer otherwise delete the code to view the site-->
+
+@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LEDLights"].ConnectionString))
+    {
+        var db = Database.Open("LEDLights");
+        var QueryString = "SELECT * FROM Produkter";
+        var result = db.Query(QueryString);
+        {
+            foreach (var Produkter in result)
+            {
+                @Produkter.ID
+                @Produkter.Name
+                @Produkter.Price
+            }
+        }
+    }
+}
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,13 +37,14 @@
     <script src="~/JavaScript/JavaScript.js"></script>
 </head>
 <body>
+    <!--Latest Products Begins-->
     <section class="container content-section">
         <h2 class="section-header">Enfärgade</h2>
         <div class="shop-items">
             <div class="card">
                 <img class="shop-item-image" src="~/Images/18c0b372a063955ca6d28e77ab9f09a0.jpg" alt="">
-                <br/>
-                <h4 class="shop-item-title">1-Pack Enfärgad <br />LED remsa</h4>   
+                <br />
+                <h4 class="shop-item-title">1-Pack Enfärgad <br />LED remsa</h4>
                 <h4 class="shop-item-price">175 kr</h4>
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
@@ -24,17 +52,17 @@
             </div>
             <div class="card">
                 <img class="shop-item-image" src="~/Images/HTB1ighuayDxK1RjSsph762HrpXaM.png" alt="">
-                <br/>
-                <h4 class="shop-item-title">XXL flerfärgade <br />LED remsa</h4> 
+                <br />
+                <h4 class="shop-item-title">XXL flerfärgade <br />LED remsa</h4>
                 <h4 class="shop-item-price"> 200 kr</h4>
-                
+
                 <div class="shop-item-details">
                     <button class="btn btn-primary shop-item-button" type="button">LÄGG TILL I KUNDVAGN!</button>
                 </div>
             </div>
             <div class="card">
                 <img class="shop-item-image" src="~/Images/nedladdning.jpg" alt="">
-                <br/>
+                <br />
                 <h4 class="shop-item-title">1-Pack Enfärgad <br />LED remsa</h4>
                 <h4 class="shop-item-price">150 kr</h4>
                 <div class="shop-item-details">
@@ -43,8 +71,8 @@
             </div>
         </div>
     </section>
-
-    <!-- Kod för min kundvagn -->
+    <!--Latest Products Ends-->
+    <!-- Code for Shoping-basket starts -->
     <section class="container content-section">
         <h2 class="section-header">KUNDVAGN</h2>
         <div class="cart-row">
@@ -60,8 +88,9 @@
         </div>
         <button class="btn btn-primary btn-purchase" type="button">KÖP</button>
     </section>
-    <!--Footer Börjar-->
-    <!-- footer -->
+    <!-- Code for Shoping-basket Ends -->
+    <!--Footer Begins-->
+
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -108,6 +137,6 @@
             <p class="copyright">Copyright 2021 | Gabriel Adward</p>
         </div>
     </div>
-    <!--Footer Slutar-->
+    <!--Footer Ends-->
 </body>
 </html>
