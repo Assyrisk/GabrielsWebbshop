@@ -11,20 +11,20 @@
 
 <!--The code for database worked but on saturday all collapsed and stopped working, try this code on your computer otherwise delete the code to view the site-->
 
-@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LEDLights"].ConnectionString))
+@{
+
+    var db = Database.Open("LEDLights");
+    var QueryString = "SELECT * FROM Produkter";
+    var result = db.Query(QueryString);
     {
-        var db = Database.Open("LEDLights");
-        var QueryString = "SELECT * FROM Produkter";
-        var result = db.Query(QueryString);
+        foreach (var produkter in result)
         {
-            foreach (var Produkter in result)
-            {
-                @Produkter.ID
-                @Produkter.Name
-                @Produkter.Price
-            }
+            @produkter.ID
+            @produkter.Name
+            @produkter.Price
         }
     }
+
 }
 
 

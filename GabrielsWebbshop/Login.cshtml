@@ -7,10 +7,10 @@
 @using System.Data.SqlClient;
 
 <!--The code for database worked but on saturday all collapsed and stopped working, try this code on your computer otherwise delete the code to view the site-->
-@{ using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["LEDLights"].ConnectionString))
-    {
+@{ 
+    
         var db = Database.Open("LEDLights");
-        var QueryString = "SELECT * FROM Information";
+        var QueryString = "SELECT * FROM Information order by id asc";
         var result = db.Query(QueryString);
         {
             foreach (var Information in result)
@@ -20,7 +20,7 @@
                 @Information.Password
             }
         }
-    }
+    
 }
 
 
